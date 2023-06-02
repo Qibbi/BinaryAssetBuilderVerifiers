@@ -49,7 +49,7 @@ namespace BinaryAssetBuilder.GameObjectVerifier
                 XmlNodeList list = draw.SelectNodes("ea:AnimationState[@ParseCondStateType=\"PARSE_DEFAULT\"]", _namespaceManager);
                 if (list.Count > 1)
                 {
-                    _tracer.TraceWarning("GameObject {0} has {1} default animation states in draw element {3}", gameObjectId, list.Count, draw.Name);
+                    _tracer.TraceWarning("GameObject {0} has {1} default animation states in draw element {2}", gameObjectId, list.Count, draw.Name);
                     result = false;
                 }
                 return result;
