@@ -1,15 +1,15 @@
-﻿using BinaryAssetBuilder.Core;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Xml;
+using BinaryAssetBuilder.Core;
 
-namespace BinaryAssetBuilder.HierarchyVerifier
+namespace BinaryAssetBuilder.GameObjectVerifier
 {
     public class Plugin : IAssetBuilderVerifierPlugin
     {
         private static class GameObjectVerifier
         {
-            private static readonly Tracer _tracer = Tracer.GetTracer(nameof(HierarchyVerifier), "Verifies that Game Objects are correct.");
+            private static readonly Tracer _tracer = Tracer.GetTracer(nameof(GameObjectVerifier), "Verifies that Game Objects are correct.");
             private static XmlNamespaceManager _namespaceManager;
             private static readonly Regex _transitionStateNameRegex = new Regex(@"CurDrawableSetTransitionAnimState\s*\(\""(?<arg>\w+)\""\)", RegexOptions.Compiled);
 
